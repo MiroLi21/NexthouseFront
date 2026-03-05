@@ -3,9 +3,7 @@ import architecture from "@/project/architecture/architectureRoute";
 import admin from "@/project/admin/adminRoute";
 
 const router = createRouter({
-  history: createWebHistory(
-    import.meta.env.MODE === "production" ? "/nexthouse" : "/",
-  ),
+  history: createWebHistory(import.meta.env.MODE === "production" ? "/" : "/"),
   linkExactActiveClass: "linkExactActiveClass",
   routes: [
     // ─── Public Architecture Site ───────────────────────

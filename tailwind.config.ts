@@ -1,5 +1,14 @@
-export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx,vue,html}"],
+/* eslint-disable no-undef */
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: "class",
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.html",
+    "./src/**/*.vue",
+    "./src/**/*.jsx",
+  ],
   theme: {
     screens: {
       xs: "350px",

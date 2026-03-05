@@ -27,8 +27,17 @@ export default defineConfig({
     "process.env": process.env,
   },
   //  base: process.env.NODE_ENV === "production" ? "/medicinex" : "/",
-  base: process.env.NODE_ENV === "production" ? "/institutes" : "/",
+  base: process.env.NODE_ENV === "production" ? "/" : "/",
   server: {
     port: 2002,
+    watch: {
+      usePolling: true,
+    },
+    proxy: {
+      "/Nexthouse/public/storage": {
+        target: "http://localhost",
+        changeOrigin: true,
+      },
+    },
   },
 });
