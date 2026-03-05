@@ -1,0 +1,292 @@
+@import "tailwindcss";
+button {
+  cursor: pointer;
+}
+@custom-variant dark (&:is(.dark *));
+:root {
+  --radius: 0.5rem;
+  
+  /* Default color - Zinc */
+  --primary: 240 5.9% 10%;
+  --primary-foreground: 0 0% 98%;
+  --primary-text: 0 0% 100%;
+  --primary-foreground-text: 0 0% 0%;
+}
+.toast-success { @apply bg-green-500 text-white; }
+.toast-error { @apply bg-red-500 text-white; }
+.toast-warning { @apply bg-orange-500 text-white; }
+.toast-info { @apply bg-blue-500 text-white; }
+
+/* main.css */
+:root {
+  /* Light theme colors */ 
+  --zinc-primary: 240 5.9% 10%;
+  --zinc-primary-foreground: 0 0% 98%;
+  --zinc-primary-text: 0 0% 98%;
+  --zinc-primary-foreground-text: 0 0% 98%;
+  
+  --slate-primary: 215 14% 34%;
+  --slate-primary-foreground: 210 40% 98%;
+  --slate-primary-text: 210 40% 98%;
+  --slate-primary-foreground-text: 210 40% 98%;
+  
+  --stone-primary: 25 5% 45%;
+  --stone-primary-foreground: 60 9% 98%;
+  --stone-primary-text: 60 9% 98%;
+  --stone-primary-foreground-text: 60 9% 98%;
+  
+  --gray-primary: 220 9% 46%;
+  --gray-primary-foreground: 0 0% 98%;
+  --gray-primary-text: 0 0% 98%;
+  --gray-primary-foreground-text: 0 0% 98%;
+  
+  --neutral-primary: 0 0% 45%;
+  --neutral-primary-foreground: 0 0% 98%;
+  --neutral-primary-text: 0 0% 98%;
+  --neutral-primary-foreground-text: 0 0% 98%;
+  
+  --red-primary: 0 72% 51%;
+  --red-primary-foreground: 0 85% 97%;
+  --red-primary-text: 0 85% 97%;
+  --red-primary-foreground-text: 0 85% 97%;
+  
+  --rose-primary: 346 77% 50%;
+  --rose-primary-foreground: 356 100% 97%;
+  --rose-primary-text: 356 100% 97%;
+  --rose-primary-foreground-text: 356 100% 97%;
+  
+  --orange-primary: 25 95% 53%;
+  --orange-primary-foreground: 33 100% 96%;
+  --orange-primary-text: 33 100% 96%;
+  --orange-primary-foreground-text: 33 100% 96%;
+  
+  --green-primary: 142 71% 29%;
+  --green-primary-foreground: 138 76% 97%;
+  --green-primary-text: 138 76% 97%;
+  --green-primary-foreground-text: 138 76% 97%;
+  
+  --blue-primary: 221 83% 53%;
+  --blue-primary-foreground: 214 100% 97%;
+  --blue-primary-text: 214 100% 97%;
+  --blue-primary-foreground-text: 214 100% 97%;
+  
+  --yellow-primary: 47 92% 50%;
+  --yellow-primary-foreground: 55 100% 96%;
+  --yellow-primary-text: 55 100% 96%;
+  --yellow-primary-foreground-text: 55 100% 96%;
+  
+  --violet-primary: 258 90% 66%;
+  --violet-primary-foreground: 250 100% 98%;
+  --violet-primary-text: 250 100% 98%;
+  --violet-primary-foreground-text: 250 100% 98%;
+}
+
+.dark {
+  /* Dark theme colors */
+  --zinc-primary-text: 0 0% 98%;
+  --zinc-primary: 240 3.7% 35%;
+  --zinc-primary-foreground: 240 3.7% 15%;
+  --zinc-primary-foreground-text: 0 0% 98%;
+   
+  --slate-primary-text: 210 40% 98%;
+  --slate-primary: 215 16% 47%;
+  --slate-primary-foreground: 215 16% 25%;
+  --slate-primary-foreground-text: 210 40% 98%;
+  
+  --stone-primary-text: 60 9% 98%;
+  --stone-primary: 25 5% 37%;
+  --stone-primary-foreground: 25 5% 15%;
+  --stone-primary-foreground-text: 60 9% 98%;
+  
+  --gray-primary-text: 0 0% 98%;
+  --gray-primary: 215 14% 34%;
+  --gray-primary-foreground: 215 14% 15%;
+  --gray-primary-foreground-text: 0 0% 98%;
+  
+  --neutral-primary-text: 0 0% 9%;
+  --neutral-primary: 0 0% 89%;
+  --neutral-primary-foreground: 0 0% 5%;
+  --neutral-primary-foreground-text: 0 0% 89%;
+  
+  --red-primary-text: 0 85% 15%;
+  --red-primary: 0 72% 61%;
+  --red-primary-foreground: 0 85% 15%;
+  --red-primary-foreground-text: 0 72% 61%;
+  
+  --rose-primary-text: 356 100% 17%;
+  --rose-primary: 346 77% 58%;
+  --rose-primary-foreground: 356 100% 17%;
+  --rose-primary-foreground-text: 346 77% 58%;
+  
+  --orange-primary-text: 33 100% 14%;
+  --orange-primary: 25 95% 60%;
+  --orange-primary-foreground: 33 100% 14%;
+  --orange-primary-foreground-text: 0 95% 60%;
+  
+  --green-primary-text: 138 76% 10%;
+  --green-primary: 142 71% 36%;
+  --green-primary-foreground: 138 76% 10%;
+  --green-primary-foreground-text: 142 71% 36%;
+  
+  --blue-primary-text: 214 100% 13%;
+  --blue-primary: 221 83% 60%;
+  --blue-primary-foreground: 214 100% 13%;
+  --blue-primary-foreground-text: 221 83% 60%;
+  
+  --yellow-primary-text: 55 100% 11%;
+  --yellow-primary: 47 92% 55%;
+  --yellow-primary-foreground: 55 100% 11%;
+  --yellow-primary-foreground-text: 47 92% 55%;
+  
+  --violet-primary-text: 250 100% 15%;
+  --violet-primary: 258 90% 72%;
+  --violet-primary-foreground: 250 100% 15%;
+  --violet-primary-foreground-text: 258 90% 72%;
+}
+
+
+:root {
+  --background: rgba(255, 255, 255, 1);
+  --foreground: rgba(37, 37, 37, 1);
+  --card: rgba(255, 255, 255, 1);
+  --card-foreground: rgba(37, 37, 37, 1);
+  --popover: rgba(255, 255, 255, 1);
+  --popover-foreground: rgba(37, 37, 37, 1);
+  --primary: rgba(52, 52, 52, 1);
+  --primary-foreground: rgba(251, 251, 251, 1);
+  --text: rgba(37, 37, 37, 1);
+  --secondary: rgba(247, 247, 247, 1);
+  --secondary-foreground: rgba(52, 52, 52, 1);
+  --muted: rgba(247, 247, 247, 1);
+  --muted-foreground: rgba(142, 142, 142, 1);
+  --accent: rgba(247, 247, 247, 1);
+  --accent-foreground: rgba(52, 52, 52, 1);
+  --destructive: rgba(255, 0, 0, 1);
+  --destructive-foreground: rgba(255, 0, 0, 1);
+  --border: rgba(235, 235, 235, 1);
+  --input: rgba(235, 235, 235, 1);
+  --ring: rgba(181, 181, 181, 1);
+  --chart-1: rgba(139, 92, 246, 1);
+  --chart-2: rgba(59, 130, 246, 1);
+  --chart-3: rgba(234, 179, 8, 1);
+  --chart-4: rgba(249, 115, 22, 1);
+  --chart-5: rgba(22, 163, 74, 1);
+  --radius: 0.625rem;
+  --sidebar: rgba(251, 251, 251, 1);
+  --sidebar-foreground: rgba(37, 37, 37, 1);
+  --sidebar-primary: rgba(52, 52, 52, 1);
+  --sidebar-primary-foreground: rgba(251, 251, 251, 1);
+  --sidebar-accent: rgba(247, 247, 247, 1);
+  --sidebar-accent-foreground: rgba(52, 52, 52, 1);
+  --sidebar-border: rgba(235, 235, 235, 1);
+  --sidebar-ring: rgba(181, 181, 181, 1);
+}
+
+.dark {
+  --background: rgba(37, 37, 37, 1);
+  --foreground: rgba(251, 251, 251, 1);
+  --card: rgba(37, 37, 37, 1);
+  --card-foreground: rgba(251, 251, 251, 1);
+  --popover: rgba(37, 37, 37, 1);
+  --popover-foreground: rgba(251, 251, 251, 1);
+  --primary: rgba(251, 251, 251, 1);
+  --primary-foreground: rgba(52, 52, 52, 1);
+  --secondary: rgba(69, 69, 69, 1);
+  --secondary-foreground: rgba(251, 251, 251, 1);
+  --muted: rgba(69, 69, 69, 1);
+  --muted-foreground: rgba(181, 181, 181, 1);
+  --accent: rgba(69, 69, 69, 1);
+  --accent-foreground: rgba(251, 251, 251, 1);
+  --destructive: rgba(255, 0, 0, 1);
+  --destructive-foreground: rgba(255, 0, 0, 1);
+  --border: rgba(69, 69, 69, 1);
+  --input: rgba(69, 69, 69, 1);
+  --ring: rgba(112, 112, 112, 1);
+  --chart-1: rgba(139, 92, 246, 1);
+  --chart-2: rgba(59, 130, 246, 1);
+  --chart-3: rgba(234, 179, 8, 1);
+  --chart-4: rgba(249, 115, 22, 1);
+  --chart-5: rgba(22, 163, 74, 1);
+  --sidebar: rgba(52, 52, 52, 1);
+  --sidebar-foreground: rgba(251, 251, 251, 1);
+  --sidebar-primary: rgba(139, 92, 246, 1);
+  --sidebar-primary-foreground: rgba(251, 251, 251, 1);
+  --sidebar-accent: rgba(69, 69, 69, 1);
+  --sidebar-accent-foreground: rgba(251, 251, 251, 1);
+  --sidebar-border: rgba(69, 69, 69, 1);
+  --sidebar-ring: rgba(112, 112, 112, 1);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-text: var(--primary-text);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-foreground-text: var(--primary-foreground-text);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+/* main.css */
+@layer utilities {
+  /* Logical properties for RTL support */
+  [dir="rtl"] .ms-4 {
+    margin-inline-start: 1rem;
+  }
+  
+  [dir="rtl"] .me-4 {
+    margin-inline-end: 1rem;
+  }
+
+  [dir="rtl"] .text-start {
+    text-align: start;
+  }
+
+  [dir="rtl"] .flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  /* Custom RTL flip */
+  [dir="rtl"] .rtl-flip {
+    transform: scaleX(-1);
+  }
+}

@@ -1,0 +1,12 @@
+import { createApp } from "vue";
+import { createPinia } from "pinia";
+import router from "./router";
+import App from "./App.vue";
+import "./style.css";
+import "./assets/vue-select.css";
+import vSelect from "vue-select";
+const app = createApp(App);
+app.component("vSelect", vSelect);
+app.use(createPinia());
+app.use(router);
+app.mount("#app");
