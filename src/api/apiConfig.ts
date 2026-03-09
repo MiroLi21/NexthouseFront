@@ -4,7 +4,7 @@ import router from "@/router";
 const TOKEN_KEY = "nh_admin_token";
 
 const Api = axios.create({
-  baseURL: "https://nexthouse.it.com/api",
+  baseURL: "https://api.nexthouse.it.com/api",
 });
 
 Api.defaults.withCredentials = false;
